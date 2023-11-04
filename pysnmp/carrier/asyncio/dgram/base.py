@@ -44,7 +44,8 @@ from pysnmp import debug
 from pysnmp.carrier import error
 from pysnmp.carrier.asyncio.base import AbstractAsyncioTransport
 
-IS_PYTHON_344_PLUS = platform.python_version_tuple() >= ('3', '4', '4')
+# Force to True
+IS_PYTHON_344_PLUS = True # platform.python_version_tuple() >= ('3', '4', '4')
 
 
 class DgramAsyncioProtocol(asyncio.DatagramProtocol, AbstractAsyncioTransport):
