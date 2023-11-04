@@ -43,7 +43,8 @@ except ImportError:
 from pysnmp.carrier.base import AbstractTransportDispatcher
 from pysnmp.error import PySnmpError
 
-IS_PYTHON_344_PLUS = platform.python_version_tuple() >= ('3', '4', '4')
+# This was evaluating to false despite higher versions of python
+IS_PYTHON_344_PLUS = True # platform.python_version_tuple() >= ('3', '4', '4') 
 
 
 class AsyncioDispatcher(AbstractTransportDispatcher):
